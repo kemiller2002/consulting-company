@@ -1,196 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Echelon Foundry</title>
-        <style>
-            body {
-                font-family: 'Segoe UI', sans-serif;
-                margin: 0;
-                color: #1C1C1E;
-                background: #F5F5F5;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - Echelon Foundry</title>
+    <script src="/includes.js" defer></script>
 
-            header,
-            footer {
-                background: #1C1C1E;
-                color: white;
-                padding: 1rem 2rem;
-            }
+  </head>
 
-            nav a {
-                color: white;
-                margin: 0 1rem;
-                text-decoration: none;
-                font-weight: bold;
-            }
+  <body>
+    <div data-include="/partials/header.html"></div>
 
-            .hero {
-                background: #D6D9DC;
-                padding: 4rem 2rem;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-                color: #1C1C1E;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-                margin-bottom: 2rem;
-            }
-
-            .cta-buttons a {
-                background: #B87333;
-                color: white;
-                padding: 0.75rem 1.5rem;
-                margin: 0.5rem;
-                border-radius: 5px;
-                text-decoration: none;
-                display: inline-block;
-            }
-
-            section {
-                padding: 3rem 2rem;
-            }
-
-            h2 {
-                color: #1C1C1E;
-            }
-
-            .grid {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-            }
-
-            .card {
-                background: white;
-                padding: 1.5rem;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-                flex: 1 1 45%;
-            }
-
-            .contact-form {
-                max-width: 600px;
-                margin: auto;
-            }
-
-            .contact-form input,
-            .contact-form textarea {
-                width: 100%;
-                padding: 0.75rem;
-                margin-bottom: 1rem;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-
-            .contact-form button {
-                background: #B87333;
-                color: white;
-                padding: 0.75rem 1.5rem;
-                border: none;
-                border-radius: 5px;
-            }
-
-            footer {
-                text-align: center;
-                font-size: 0.9rem;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <h1 style="margin:0;">Echelon Foundry</h1>
-                <nav>
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#cases">Use Cases</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </header>
-
-        <div class="hero">
-            <h1>From Systems to Supply Chains, We Architect What Matters.</h1>
-            <p>Strategic consulting across tech, finance, food systems, and complex operations.</p>
-            <div class="cta-buttons">
-                <a href="#contact">Schedule a Call</a>
-                <a href="#services">View Services</a>
-            </div>
+    <main>
+      <div class="hero">
+        <h1>From Systems to Supply Chains, We Architect What Matters.</h1>
+        <p>Tech. Finance. Flow. Food. Forged into Strategy.</p>
+        <div class="cta-buttons">
+          <a href="#contact">Schedule a Call</a>
+          <a href="#services">View Services</a>
         </div>
+      </div>
 
-        <section id="services">
-            <h2>What We Do</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Architecture & Systems</h3>
-                    <p>Cloud platforms, legacy modernization, and data engineering.</p>
-                </div>
-                <div class="card">
-                    <h3>Financial Strategy</h3>
-                    <p>DAF platforms, financial operations, and fintech advisory.</p>
-                </div>
-                <div class="card">
-                    <h3>Supply Chain Optimization</h3>
-                    <p>Vendor systems, logistics flow, and operational tooling.</p>
-                </div>
-                <div class="card">
-                    <h3>Food & Product Tech</h3>
-                    <p>Kitchen systems, traceability, and product innovation in food spaces.</p>
-                </div>
-            </div>
-        </section>
+      <section id="services">
+        <h2>What We Do</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Architecture & Systems</h3>
+            <p>Cloud platforms, legacy modernization, and data engineering.</p>
+          </div>
+          <div class="card">
+            <h3>Financial Strategy</h3>
+            <p>DAF platforms, financial operations, and fintech advisory.</p>
+          </div>
+          <div class="card">
+            <h3>Supply Chain Optimization</h3>
+            <p>Vendor systems, logistics flow, and operational tooling.</p>
+          </div>
+          <div class="card">
+            <h3>Food & Product Tech</h3>
+            <p>Kitchen systems, traceability, and product innovation in food spaces.</p>
+          </div>
+        </div>
+      </section>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>Echelon Foundry is led by Kevin Miller, a seasoned technology executive with 25+ years of experience
-                across software, finance, nonprofit, and food systems. Combining deep engineering skill with strategic
-                vision, Kevin helps organizations scale smarter and innovate with purpose.</p>
-        </section>
+      <section id="about">
+        <h2>About</h2>
+        <p>Echelon Foundry is led by Kevin Miller, a seasoned technology executive with 25+ years of experience
+          across software, finance, nonprofit, and food systems. Combining deep engineering skill with strategic
+          vision, Kevin helps organizations scale smarter and innovate with purpose.</p>
+      </section>
 
-        <section id="cases">
-            <h2>Use Cases</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>DAF Modernization</h3>
-                    <p>Scaled platforms serving 17 top financial institutions.</p>
-                </div>
-                <div class="card">
-                    <h3>Ops Cost Reduction</h3>
-                    <p>Saved $500K+ annually via architecture optimization.</p>
-                </div>
-                <div class="card">
-                    <h3>Food Supply Chain Digitization</h3>
-                    <p>Streamlined systems for regional distributor.</p>
-                </div>
-                <div class="card">
-                    <h3>Fintech Compliance Tools</h3>
-                    <p>Advised on tools and data flows for risk tracking.</p>
-                </div>
-            </div>
-        </section>
+      <section id="cases">
+        <h2>Use Cases</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>DAF Modernization</h3>
+            <p>Scaled platforms serving 17 top financial institutions.</p>
+          </div>
+          <div class="card">
+            <h3>Ops Cost Reduction</h3>
+            <p>Saved $500K+ annually via architecture optimization.</p>
+          </div>
+          <div class="card">
+            <h3>Food Supply Chain Digitization</h3>
+            <p>Streamlined systems for regional distributor.</p>
+          </div>
+          <div class="card">
+            <h3>Fintech Compliance Tools</h3>
+            <p>Advised on tools and data flows for risk tracking.</p>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <textarea rows="5" placeholder="What challenge are you tackling?" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="What challenge are you tackling?" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
 
-        <footer>
-            <p>© Echelon Foundry — Strategy Forged.</p>
-        </footer>
-    </body>
+    <div data-include="/partials/footer.html"></div>
+  </body>
 
 </html>
