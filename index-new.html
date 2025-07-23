@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Service Page – Echelon Foundry</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                margin: 0;
+                background: #F5F5F5;
+                color: #1C1C1E;
+            }
+
+            header,
+            footer {
+                background: #1C1C1E;
+                color: white;
+                padding: 1.5rem 2rem;
+            }
+
+            nav a {
+                color: white;
+                margin: 0 1rem;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .hero {
+                background-color: #1C1C1E;
+                color: #F5F5F5;
+                padding: 4rem 2rem;
+                text-align: center;
+                animation: fadeIn 1.2s ease-out;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #D6D9DC;
+                animation: slideUp 1s ease-out;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                color: #B87333;
+                animation: slideUp 1s ease-out 0.2s;
+            }
+
+            main {
+                max-width: 900px;
+                margin: auto;
+                padding: 3rem 2rem;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            }
+
+            h2 {
+                color: #1C1C1E;
+                margin-top: 2rem;
+                animation: fadeIn 1.2s ease-out;
+            }
+
+            ul {
+                padding-left: 1.2rem;
+            }
+
+            li {
+                margin-bottom: 0.5rem;
+                animation: fadeInUp 0.6s ease-out;
+            }
+
+            footer {
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h1 style="margin:0; font-size:1.5rem;">Echelon Foundry</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="cases.html">Use Cases</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="hero">
+            <h1>Technology Architecture</h1>
+            <p>Designing systems that scale, evolve, and deliver real-world impact.</p>
+        </div>
+
+        <main>
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Legacy modernization & system audits</li>
+                <li>Microservice & distributed architecture design</li>
+                <li>Cloud migration strategies</li>
+                <li>AI/ML system integration frameworks</li>
+            </ul>
+
+            <h2>How We Work</h2>
+            <p>We begin with a deep assessment of your current technology ecosystem, followed by collaborative design
+                sessions to craft architectures that support scale, security, and clarity. We don’t just deliver
+                diagrams—we deliver aligned systems and outcomes.</p>
+
+            <h2>Example Engagements</h2>
+            <ul>
+                <li>Replatformed core systems for a $1B fintech company</li>
+                <li>Designed hybrid-cloud architecture for a high-growth nonprofit</li>
+                <li>Integrated AI into operational tooling for a supply chain firm</li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>© Echelon Foundry — Strategy Forged.</p>
+        </footer>
+    </body>
+
+</html>
