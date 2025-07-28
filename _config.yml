@@ -1,7 +1,8 @@
 title: Echelon Foundry
-email: kemiller2002@gmail.com
 description: Strategy. Architecture. Insight. Forged.
 baseurl: ""
-url: "https://kemiller2002.github.io/consulting-company"
-theme: minima
+url: ""
 markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
