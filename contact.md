@@ -5,7 +5,7 @@ title: Contact
 
 # Contact
 
-Let's connect. Whether you're exploring a challenge, planning a transformation, or just curious, we're here.
+Let’s connect and make things better, smarter, and simpler.
 
 **Email:** kemiller2002@gmail.com  
 **GitHub:** [kemiller2002](https://github.com/kemiller2002)
