@@ -1,0 +1,67 @@
+{
+  "caseStudies": [
+    {
+      "id": "concrete-forensics",
+      "title": "Concrete Forensics: Diagnosing Failure in Plain Sight",
+      "category": "Applied Diagnostics",
+      "focusAreas": [
+        "Structural Analysis",
+        "Process Integrity",
+        "Compliance Mapping"
+      ],
+      "tags": ["Concrete", "Forensics", "Diagnostics", "ASTM", "ACI"],
+      "summary": "A residential structural failure investigation where Echelon Foundry used the Diagnostic Framework to uncover curing, slope, and workmanship pathologies hidden behind visible surface defects.",
+      "weight": 1,
+      "url": "/case-studies/concrete-forensics.html",
+      "status": "published",
+      "thumbnail": "/assets/images/case-studies/concrete-forensics.jpg",
+      "outcome": "Root causes identified before destructive testing; remediation and verification plan aligned with ASTM standards."
+    },
+    {
+      "id": "financial-platform-diagnostic",
+      "title": "Financial Platform Diagnostic: Rebuilding Trust Through Systemic Clarity",
+      "category": "Applied Diagnostics",
+      "focusAreas": [
+        "Data Integrity",
+        "Financial Controls",
+        "System Modernization"
+      ],
+      "tags": [
+        "Finance",
+        "Data Architecture",
+        "Compliance",
+        "Diagnostics",
+        "Automation"
+      ],
+      "summary": "A fintech-scale audit that revealed systemic control gaps in data lineage and reconciliation, restoring financial accuracy and compliance confidence through architectural and process alignment.",
+      "weight": 2,
+      "url": "/case-studies/financial-platform-diagnostic.html",
+      "status": "published",
+      "thumbnail": "/assets/images/case-studies/financial-diagnostic.jpg",
+      "outcome": "Reconciliation times reduced 80%; systemic control and investor confidence restored."
+    },
+    {
+      "id": "organizational-throughput",
+      "title": "Organizational Throughput Diagnostic: Restoring Flow in a High-Complexity Environment",
+      "category": "Applied Diagnostics",
+      "focusAreas": [
+        "Engineering Velocity",
+        "Organizational Design",
+        "Process Alignment"
+      ],
+      "tags": [
+        "Agile",
+        "Leadership",
+        "Governance",
+        "Diagnostics",
+        "System Thinking"
+      ],
+      "summary": "An enterprise engineering analysis that identified architectural and cultural feedback loops throttling throughput, leading to a data-driven reorganization and measurable flow recovery.",
+      "weight": 3,
+      "url": "/case-studies/organizational-throughput.html",
+      "status": "published",
+      "thumbnail": "/assets/images/case-studies/organizational-throughput.jpg",
+      "outcome": "Deployment frequency doubled; unplanned work reduced 50%; morale and engagement metrics improved."
+    }
+  ]
+}
