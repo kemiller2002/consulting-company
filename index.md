@@ -44,6 +44,7 @@ title: Home
 
 <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
   {% for study in site.data.case-studies.caseStudies %}
+  <div class="card">
     <a href="{{ study.url }}" class="block bg-white rounded shadow p-6 hover:shadow-lg transition">
       {% if study.thumbnail %}
         <img src="{{ study.thumbnail }}" alt="{{ study.title }}" class="rounded mb-4">
@@ -52,5 +53,7 @@ title: Home
       <p class="text-gray-600 mb-3">{{ study.summary }}</p>
       <p class="text-sm text-gray-400">{{ study.category }}</p>
     </a>
-  {% endfor %}
+  </div>
+{% endfor %}
+
 </section>
