@@ -62,6 +62,29 @@
       "status": "published",
       "thumbnail": "/assets/images/case-studies/organizational-throughput.jpg",
       "outcome": "Deployment frequency doubled; unplanned work reduced 50%; morale and engagement metrics improved."
+    },
+    {
+      "id": "fintech-investment",
+      "title": "Investment Due Diligence: Integrating Technical Reality With Financial Outcomes",
+      "category": "Applied Diagnostics",
+      "focusAreas": [
+        "Architecture Risk",
+        "Operational Maturity",
+        "Financial Analysis"
+      ],
+      "tags": [
+        "Fintech",
+        "Due Diligence",
+        "Engineering Assessment",
+        "Risk Modeling",
+        "Diagnostics"
+      ],
+      "summary": "A combined financial and technical due-diligence engagement where Echelon Foundry evaluated a high-velocity fintech platform, uncovering material architectural and operational risks and guiding capital allocation toward a stronger medical-sector opportunity.",
+      "weight": 4,
+      "url": "/case-studies/fintech-investment.html",
+      "status": "published",
+      "thumbnail": "/assets/images/case-studies/fintech-investment.jpg",
+      "outcome": "Investment preserved and reallocated; risk-adjusted returns improved by avoiding a high-risk fintech position and directing capital to a higher-performing medical opportunity."
     }
   ]
 }

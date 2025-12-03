@@ -1,0 +1,28 @@
+# Dockerfile
+
+# Ruby version compatible with the GitHub Pages stack.
+# If you ever see weird version errors, you can switch this
+# to match the Ruby version in the pages-gem repo’s `.ruby-version`.
+FROM ruby:3.1
+
+# Install build tools and Node (for Jekyll assets / JS pipelines)
+RUN apt-get update -y \
+    && apt-get install -y build-essential nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create app directory
+WORKDIR /srv/jekyll
+
+# Install gems using your Gemfile (uses github-pages => same deps as GitHub)
+COPY Gemfile Gemfile.lock* ./
+RUN bundle config set --local path 'vendor/bundle' \
+    && bundle install
+
+# Copy the rest of the site
+COPY . .
+
+# Jekyll default dev port
+EXPOSE 4000
+
+# Serve the site using the GitHub Pages environment
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--port", "4000", "--livereload", "--force_polling"]
