@@ -96,6 +96,29 @@ img {
   letter-spacing: 0.02em;
 }
 
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+}
+
+.brand-logo {
+  height: 36px;
+  width: 36px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+}
+
 .brand-subtitle {
   display: block;
   color: var(--muted);

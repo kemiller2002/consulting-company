@@ -6,7 +6,7 @@ title: Home
 <section class="hero">
   <div class="hero-grid">
     <div class="stack">
-      <span class="eyebrow">Sister platform <a href="{{ '/helixnote' | relative_url }}" class="chip">HelixNote ↗</a></span>
+      <span class="eyebrow"><a href="{{ '/helixnote' | relative_url }}" class="chip">HelixNote ↗</a></span>
       <h1>Engineering precision with board-ready clarity.</h1>
       <p class="lead">We help founders, product leaders, and investors navigate complex systems, modernize reliably, and connect architecture choices to measurable outcomes.</p>
       <div class="actions">
