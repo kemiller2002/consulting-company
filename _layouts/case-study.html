@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="case-study">
+  <div class="case-meta">
+    {% if page.category %}<span class="chip">{{ page.category }}</span>{% endif %}
+    {% if page.focus_areas %}
+      {% for item in page.focus_areas %}
+        <span class="tag">{{ item }}</span>
+      {% endfor %}
+    {% endif %}
+    {% if page.tags %}
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="case-body">
+    {{ content }}
+  </div>
+</section>

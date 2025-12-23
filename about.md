@@ -4,32 +4,46 @@ title: About
 ---
 
 <section id="about">
-  <h1>About Echelon Foundry</h1>
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">About</span>
+      <h1>Kevin Miller, founder of Echelon Foundry</h1>
+      <p class="lead">25+ years guiding engineering orgs through modernization, transformation, and investor-grade clarity.</p>
+    </div>
+    <div class="chip">Microsoft MVP · 18M+ reached via talks & publications</div>
+  </div>
 
-  <p><strong>Kevin Miller</strong> is the founder and principal architect at Echelon Foundry, bringing over 25 years of experience guiding engineering organizations through modernization, transformation, and strategic alignment.</p>
+  <div class="columns">
+    <div class="card">
+      <h3>Field-tested leadership</h3>
+      <p>Former engineering leader at Ren and T2 Systems, where Kevin led nine teams, built resilient cloud and AI systems, and delivered enterprise solutions to 17 of the top 20 financial institutions managing donor-advised funds.</p>
+      <p>Impact highlights include $500K+ in annual operational savings, cycle times reduced from six weeks to two days, and delivery productivity lifts exceeding 40%.</p>
+    </div>
+    <div class="card">
+      <h3>Strategic advisor</h3>
+      <p>Helps executives and investors connect technical decisions to business value: Agile and delivery culture audits, modernization roadmaps, architecture ROI analysis, and diligence narratives that resonate with boards.</p>
+      <p>Kevin mixes technical rigor with an unconventional creative edge—he’s also a trained chocolatier and former culinary competitor.</p>
+    </div>
+  </div>
 
-  <p>Kevin’s background includes leadership roles at Ren and T2 Systems, where he led nine engineering teams, implemented robust cloud and AI systems, and delivered enterprise-grade solutions to 17 of the top 20 financial institutions managing donor-advised funds. His efforts have resulted in over $500K in annual operational savings, a reduction in time-to-market from six weeks to just two days, and productivity gains exceeding 40%.</p>
-
-  <p>He advises on areas like Agile transformation—assessing delivery culture, tooling, and process across complex organizations—and provides financial analysis for investors seeking technical due diligence in software-heavy firms.</p>
-
-  <p>Kevin’s leadership has been recognized with Microsoft's MVP Award for Developer Technologies, and his insights have reached over 18 million people through public speaking, publications, and community engagements. He blends technical rigor with an unconventional creative edge—he’s also a trained chocolatier and former culinary competitor.</p>
-
-  <h2>Core Expertise</h2>
-  <ul>
-    <li>Legacy system modernization & audits</li>
-    <li>Microservices & distributed architecture</li>
-    <li>Cloud migration strategy (AWS, Azure)</li>
-    <li>AI/ML integration frameworks</li>
-    <li>Performance & value impact analysis</li>
-    <li>CI/CD pipeline & Agile delivery optimization</li>
-    <li>Technical due diligence & investment advisory</li>
-    <li>Engineering organizational restructuring & mentorship</li>
-  </ul>
-
-  <h2>What Guides Us</h2>
-  <p>At Echelon Foundry, we believe in clarity over complexity. We combine systems thinking, technical excellence, and strategic grounding to help organizations build resilient architecture and sustainable growth paths.</p>
-
-  <blockquote>
-    *“Technology should empower clarity—not complexity.”*
-  </blockquote>
+  <div class="columns">
+    <div class="card">
+      <h3>Core expertise</h3>
+      <ul>
+        <li>Legacy system modernization & audits</li>
+        <li>Microservices & distributed architecture</li>
+        <li>Cloud migration strategy (AWS, Azure)</li>
+        <li>AI/ML integration frameworks</li>
+        <li>Performance & value impact analysis</li>
+        <li>CI/CD pipeline & Agile delivery optimization</li>
+        <li>Technical due diligence & investment advisory</li>
+        <li>Engineering organizational restructuring & mentorship</li>
+      </ul>
+    </div>
+    <div class="card callout">
+      <h3>What guides us</h3>
+      <p>Clarity over complexity. Systems thinking plus strategic grounding. Elegant execution that teams can sustain after we leave.</p>
+      <blockquote>“Technology should empower clarity—not complexity.”</blockquote>
+    </div>
+  </div>
 </section>
