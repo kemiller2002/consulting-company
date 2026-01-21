@@ -49,7 +49,7 @@ console.log("Data going out:", data);
 
       setStatus(form, "Sending…");
       disableForm(form, true);
-
+        console.log(form)
       try {
         const result = await submitToWorker(form);
 
