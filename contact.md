@@ -23,29 +23,36 @@ title: Contact
       <p class="mute"><em>Prefer email?</em> Reach Kevin at <strong>kevin@echelonfoundry.com</strong>.</p>
     </div>
     <div class="form-card">
-      <form
-        action="https://formspree.io/f/mblkyndy"
-        method="POST"
-        name="contact"
-        id="contact-form"
-        netlify-honeypot="bot-field"
-      >
-        <div class="stack">
-          <div>
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div>
-            <label for="message">How can we help?</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-          <button type="submit" class="button primary">Send</button>
-        </div>
-      </form>
+   <form class="contact-form" data-form-id="inquiry">
+  <label>
+    Name
+    <input name="name" type="text" autocomplete="name" required />
+  </label>
+
+  <label>
+    Email
+    <input name="email" type="email" autocomplete="email" required />
+  </label>
+
+  <label>
+    Message
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+
+  <!-- Honeypot (hidden) -->
+
+<input
+    type="text"
+    name="company_website"
+    autocomplete="off"
+    tabindex="-1"
+    style="position:absolute;left:-9999px;opacity:0;height:0;width:0"
+  />
+
+<button type="submit">Send</button>
+
+  <p class="form-status" aria-live="polite" style="margin-top: 0.75rem;"></p>
+</form>
     </div>
   </div>
 </section>
