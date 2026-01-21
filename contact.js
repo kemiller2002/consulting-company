@@ -15,34 +15,33 @@
   }
 
   async function submitToWorker(form) {
-    const formId = form.dataset.formId || "other";
+  const formId = form.dataset.formId || "other";
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.page = location.href;
+  data.site = location.hostname;
 
-    // Collect fields
-    const data = Object.fromEntries(new FormData(form).entries());
+  const resp = await fetch(`${WORKER_BASE}/submit/${encodeURIComponent(formId)}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
 
-    // Optional: add a couple helpful metadata fields
-    data.page = location.href;
-    data.site = location.hostname;
+  const text = await resp.text();
+  console.log("Worker response:", resp.status, text);
 
-    const resp = await fetch(`${WORKER_BASE}/submit/${encodeURIComponent(formId)}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    let json;
-    try {
-      json = await resp.json();
-    } catch {
-      throw new Error("Bad response from server");
-    }
-
-    if (!resp.ok || !json.ok) {
-      throw new Error(json.error || "Submission failed");
-    }
-
-    return json; // contains { ok, path, commitSha }
+  let json;
+  try {
+    json = JSON.parse(text);
+  } catch {
+    throw new Error(`Bad response from server (${resp.status}): ${text.slice(0, 200)}`);
   }
+
+  if (!resp.ok || !json.ok) {
+    throw new Error(json.error || `Submission failed (${resp.status})`);
+  }
+
+  return json;
+}
 
   document.querySelectorAll("form.contact-form").forEach(form => {
     form.addEventListener("submit", async (e) => {
