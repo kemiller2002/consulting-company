@@ -19,7 +19,7 @@
   const data = Object.fromEntries(new FormData(form).entries());
   data.page = location.href;
   data.site = location.hostname;
-console.log("Data going out:", data);
+console.log(new FormData(form).entries(), "Data going out:", data);
   const resp = await fetch(`${WORKER_BASE}/submit/${encodeURIComponent(formId)}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
