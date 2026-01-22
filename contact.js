@@ -60,6 +60,13 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
     setStatus(form, "Sending…");
     disableForm(form, true);
 
+    const formId = form.dataset.formId || "other";
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.page = location.href;
+    data.site = location.hostname;
+
+    console.log("external data", data);
+
     try {
       const result = await submitToWorker(form);
 
