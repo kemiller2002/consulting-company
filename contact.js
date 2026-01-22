@@ -14,7 +14,6 @@ function disableForm(form, disabled) {
 }
 
 async function submitToWorker(data) {
-  console.log(data);
   const resp = await fetch(
     `${WORKER_BASE}/submit/${encodeURIComponent(formId)}`,
     {
@@ -30,7 +29,8 @@ async function submitToWorker(data) {
   let json;
   try {
     json = JSON.parse(text);
-  } catch {
+  } catch (err) {
+    console.log("ERROR", err);
     throw new Error(
       `Bad response from server (${resp.status}): ${text.slice(0, 200)}`,
     );
