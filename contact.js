@@ -43,13 +43,14 @@ console.log(Array.from(new FormData(form).entries()), "Data going out:", data);
   return json;
 }
 
-  document.querySelectorAll("form.contact-form").forEach(form => {
-    form.addEventListener("submit", async (e) => {
+  document.querySelectorAll("form.contact-form").forEach(setupForm => {
+    setupForm.addEventListener("submit", async (e) => {
+        const form = e.target //document.querySelector("form.contact-form");
       e.preventDefault();
 
       setStatus(form, "Sending…");
       disableForm(form, true);
-        console.log(form)
+        
       try {
         const result = await submitToWorker(form);
 

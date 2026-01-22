@@ -23,7 +23,7 @@ title: Contact
       <p class="mute"><em>Prefer email?</em> Reach Kevin at <strong>kevin@echelonfoundry.com</strong>.</p>
     </div>
     <div class="form-card">
-<form class="contact-form" data-form-id="inquiry" id="contact-form" method="post">
+      <form class="contact-form" data-form-id="inquiry" id="contact-form" method="post">
         <div class="stack">
           <div>
             <label for="name">Your name</label>
