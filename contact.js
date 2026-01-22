@@ -13,16 +13,7 @@ function disableForm(form, disabled) {
   });
 }
 
-async function submitToWorker(form) {
-  const formId = form.dataset.formId || "other";
-  const data = Object.fromEntries(new FormData(form).entries());
-  data.page = location.href;
-  data.site = location.hostname;
-  console.log(
-    Array.from(new FormData(form).entries()),
-    "Data going out:",
-    data,
-  );
+async function submitToWorker(data) {
   const resp = await fetch(
     `${WORKER_BASE}/submit/${encodeURIComponent(formId)}`,
     {
@@ -53,21 +44,20 @@ async function submitToWorker(form) {
 
 document.querySelectorAll("form.contact-form").forEach((setupForm) => {
   setupForm.addEventListener("submit", async (e) => {
-    const form = e.target; //document.querySelector("form.contact-form");
-    console.log(e.target);
+    const form = e.target;
     e.preventDefault();
 
     const formId = form.dataset.formId || "other";
     const data = Object.fromEntries(new FormData(form).entries());
     data.page = location.href;
     data.site = location.hostname;
+    data.formId = formId;
 
-    console.log("external data", data);
     setStatus(form, "Sending…");
     disableForm(form, true);
 
     try {
-      const result = await submitToWorker(form);
+      const result = await submitToWorker(data);
 
       // Success UI
       setStatus(form, "Thanks — your message has been received.");
