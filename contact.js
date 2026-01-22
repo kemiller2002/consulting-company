@@ -14,6 +14,7 @@ function disableForm(form, disabled) {
 }
 
 async function submitToWorker(data) {
+  console.log(data);
   const resp = await fetch(
     `${WORKER_BASE}/submit/${encodeURIComponent(formId)}`,
     {
@@ -44,9 +45,9 @@ async function submitToWorker(data) {
 
 document.querySelectorAll("form.contact-form").forEach((setupForm) => {
   setupForm.addEventListener("submit", async (e) => {
-    const form = e.target;
     e.preventDefault();
 
+    const form = e.target;
     const formId = form.dataset.formId || "other";
     const data = Object.fromEntries(new FormData(form).entries());
     data.page = location.href;
