@@ -1,30 +1,36 @@
+const WORKER_BASE = "https://inquiry-intake.kemiller2002.workers.dev";
 
-  const WORKER_BASE = "https://inquiry-intake.kemiller2002.workers.dev";
+function setStatus(form, msg, isError = false) {
+  const el = form.querySelector(".form-status");
+  if (!el) return;
+  el.textContent = msg;
+  el.style.color = isError ? "crimson" : "inherit";
+}
 
-  function setStatus(form, msg, isError = false) {
-    const el = form.querySelector(".form-status");
-    if (!el) return;
-    el.textContent = msg;
-    el.style.color = isError ? "crimson" : "inherit";
-  }
+function disableForm(form, disabled) {
+  Array.from(form.querySelectorAll("input, textarea, button")).forEach((el) => {
+    el.disabled = disabled;
+  });
+}
 
-  function disableForm(form, disabled) {
-    Array.from(form.querySelectorAll("input, textarea, button")).forEach(el => {
-      el.disabled = disabled;
-    });
-  }
-
-  async function submitToWorker(form) {
+async function submitToWorker(form) {
   const formId = form.dataset.formId || "other";
   const data = Object.fromEntries(new FormData(form).entries());
   data.page = location.href;
   data.site = location.hostname;
-console.log(Array.from(new FormData(form).entries()), "Data going out:", data);
-  const resp = await fetch(`${WORKER_BASE}/submit/${encodeURIComponent(formId)}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  console.log(
+    Array.from(new FormData(form).entries()),
+    "Data going out:",
+    data,
+  );
+  const resp = await fetch(
+    `${WORKER_BASE}/submit/${encodeURIComponent(formId)}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    },
+  );
 
   const text = await resp.text();
   console.log("Worker response:", resp.status, text);
@@ -33,7 +39,9 @@ console.log(Array.from(new FormData(form).entries()), "Data going out:", data);
   try {
     json = JSON.parse(text);
   } catch {
-    throw new Error(`Bad response from server (${resp.status}): ${text.slice(0, 200)}`);
+    throw new Error(
+      `Bad response from server (${resp.status}): ${text.slice(0, 200)}`,
+    );
   }
 
   if (!resp.ok || !json.ok) {
@@ -43,28 +51,28 @@ console.log(Array.from(new FormData(form).entries()), "Data going out:", data);
   return json;
 }
 
-  document.querySelectorAll("form.contact-form").forEach(setupForm => {
-    setupForm.addEventListener("submit", async (e) => {
-        const form = e.target //document.querySelector("form.contact-form");
-      e.preventDefault();
+document.querySelectorAll("form.contact-form").forEach((setupForm) => {
+  setupForm.addEventListener("submit", async (e) => {
+    const form = e.target; //document.querySelector("form.contact-form");
+    console.log(e.target);
+    e.preventDefault();
 
-      setStatus(form, "Sending…");
-      disableForm(form, true);
-        
-      try {
-        const result = await submitToWorker(form);
+    setStatus(form, "Sending…");
+    disableForm(form, true);
 
-        // Success UI
-        setStatus(form, "Thanks — your message has been received.");
-        form.reset();
+    try {
+      const result = await submitToWorker(form);
 
-        // If you want a quiet debug in console:
-        // console.log("Saved to repo:", result.path, result.commitSha);
+      // Success UI
+      setStatus(form, "Thanks — your message has been received.");
+      form.reset();
 
-      } catch (err) {
-        setStatus(form, err.message || "Something went wrong.", true);
-      } finally {
-        disableForm(form, false);
-      }
-    });
+      // If you want a quiet debug in console:
+      // console.log("Saved to repo:", result.path, result.commitSha);
+    } catch (err) {
+      setStatus(form, err.message || "Something went wrong.", true);
+    } finally {
+      disableForm(form, false);
+    }
   });
+});
