@@ -68,6 +68,7 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
       // If you want a quiet debug in console:
       // console.log("Saved to repo:", result.path, result.commitSha);
     } catch (err) {
+      console.log(err);
       setStatus(form, err.message || "Something went wrong.", true);
     } finally {
       disableForm(form, false);
