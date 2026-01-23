@@ -14,6 +14,7 @@ function disableForm(form, disabled) {
 }
 
 async function submitToWorker(data) {
+  console.log("start");
   const resp = await fetch(
     `${WORKER_BASE}/submit/${encodeURIComponent(formId)}`,
     {
@@ -22,7 +23,7 @@ async function submitToWorker(data) {
       body: JSON.stringify(data),
     },
   );
-
+  console.log("completed", data);
   const text = await resp.text();
   console.log("Worker response:", resp.status, text);
 
@@ -56,7 +57,7 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
 
     setStatus(form, "Sending…");
     disableForm(form, true);
-
+    console.log("fired");
     try {
       const result = await submitToWorker(data);
 
