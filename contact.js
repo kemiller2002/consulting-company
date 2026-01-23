@@ -16,7 +16,7 @@ function disableForm(form, disabled) {
 async function submitToWorker(data) {
   console.log("start");
   const resp = await fetch(
-    `${WORKER_BASE}/submit/${encodeURIComponent(formId)}`,
+    `${WORKER_BASE}/submit/${encodeURIComponent(data.formId)}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
