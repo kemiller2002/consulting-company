@@ -1,4 +1,4 @@
-const WORKER_BASE = "https://inquiry.echelonfoundry.com";
+const WORKER_BASE = "https://inquiry.echeloncommunications.com";
 
 function setStatus(form, msg, isError = false) {
   const el = form.querySelector(".form-status");
