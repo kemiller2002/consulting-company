@@ -7,6 +7,16 @@ function setStatus(form, msg, isError = false) {
   el.style.color = isError ? "crimson" : "inherit";
 }
 
+function setSubmitState(form, sending) {
+  const button = form.querySelector('button[type="submit"]');
+  if (!button) return;
+  if (!button.dataset.defaultText) {
+    button.dataset.defaultText = button.textContent.trim() || "Send";
+  }
+  button.textContent = sending ? "Sending…" : button.dataset.defaultText;
+  button.setAttribute("aria-busy", sending ? "true" : "false");
+}
+
 function disableForm(form, disabled) {
   Array.from(form.querySelectorAll("input, textarea, button")).forEach((el) => {
     el.disabled = disabled;
@@ -14,7 +24,6 @@ function disableForm(form, disabled) {
 }
 
 async function submitToWorker(data) {
-  console.log("start");
   const resp = await fetch(
     `${WORKER_BASE}/submit/${encodeURIComponent(data.formId)}`,
     {
@@ -23,15 +32,12 @@ async function submitToWorker(data) {
       body: JSON.stringify(data),
     },
   );
-  console.log("completed", data);
   const text = await resp.text();
-  console.log("Worker response:", resp.status, text);
 
   let json;
   try {
     json = JSON.parse(text);
   } catch (err) {
-    console.log("ERROR", err);
     throw new Error(
       `Bad response from server (${resp.status}): ${text.slice(0, 200)}`,
     );
@@ -56,8 +62,8 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
     data.formId = formId;
 
     setStatus(form, "Sending…");
+    setSubmitState(form, true);
     disableForm(form, true);
-    console.log("fired");
     try {
       const result = await submitToWorker(data);
 
@@ -68,9 +74,9 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
       // If you want a quiet debug in console:
       // console.log("Saved to repo:", result.path, result.commitSha);
     } catch (err) {
-      console.log(err);
       setStatus(form, err.message || "Something went wrong.", true);
     } finally {
+      setSubmitState(form, false);
       disableForm(form, false);
     }
   });

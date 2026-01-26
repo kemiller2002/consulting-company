@@ -220,6 +220,7 @@ section {
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.85rem 1.3rem;
   border-radius: var(--radius-pill);
@@ -244,6 +245,18 @@ section {
 .button:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+.button:disabled:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .chip {
@@ -473,6 +486,12 @@ textarea:focus {
 .stack {
   display: grid;
   gap: 1rem;
+}
+
+.form-status {
+  min-height: 1.2rem;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 .cta-row {

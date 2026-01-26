@@ -38,6 +38,7 @@ title: Contact
             <textarea id="message" name="message" rows="6" required></textarea>
           </div>
           <button type="submit" class="button primary">Send</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </div>
       </form>
         <script src="contact.js"></script>
