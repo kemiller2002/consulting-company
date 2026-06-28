@@ -13,7 +13,7 @@ function setSubmitState(form, sending) {
   if (!button.dataset.defaultText) {
     button.dataset.defaultText = button.textContent.trim() || "Send";
   }
-  button.textContent = sending ? "Sending…" : button.dataset.defaultText;
+  button.textContent = sending ? "Sending..." : button.dataset.defaultText;
   button.setAttribute("aria-busy", sending ? "true" : "false");
 }
 
@@ -61,14 +61,14 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
     data.site = location.hostname;
     data.formId = formId;
 
-    setStatus(form, "Sending…");
+    setStatus(form, "Sending...");
     setSubmitState(form, true);
     disableForm(form, true);
     try {
       const result = await submitToWorker(data);
 
       // Success UI
-      setStatus(form, "Thanks — your message has been received.");
+      setStatus(form, "Thanks - your message has been received.");
       form.reset();
 
       // If you want a quiet debug in console:

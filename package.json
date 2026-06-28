@@ -1,0 +1,8 @@
+{
+  "name": "echelon-foundry-site",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node build.js && python3 -m http.server 4000 -d dist"
+  }
+}

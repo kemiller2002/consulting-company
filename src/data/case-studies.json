@@ -12,7 +12,7 @@
       "tags": ["Concrete", "Forensics", "Diagnostics", "ASTM", "ACI"],
       "summary": "A residential structural failure investigation where Echelon Foundry used the Diagnostic Framework to uncover curing, slope, and workmanship pathologies hidden behind visible surface defects.",
       "weight": 1,
-      "url": "/case-studies/concrete-forensics.html",
+      "slug": "concrete-forensics",
       "status": "published",
       "thumbnail": "/assets/images/case-studies/concrete-forensics.jpg",
       "outcome": "Root causes identified before destructive testing; remediation and verification plan aligned with ASTM standards."
@@ -35,7 +35,7 @@
       ],
       "summary": "A fintech-scale audit that revealed systemic control gaps in data lineage and reconciliation, restoring financial accuracy and compliance confidence through architectural and process alignment.",
       "weight": 2,
-      "url": "/case-studies/financial-platform-diagnostic.html",
+      "slug": "financial-platform-diagnostic",
       "status": "published",
       "thumbnail": "/assets/images/case-studies/financial-diagnostic.jpg",
       "outcome": "Reconciliation times reduced 80%; systemic control and investor confidence restored."
@@ -58,7 +58,7 @@
       ],
       "summary": "An enterprise engineering analysis that identified architectural and cultural feedback loops throttling throughput, leading to a data-driven reorganization and measurable flow recovery.",
       "weight": 3,
-      "url": "/case-studies/organizational-throughput.html",
+      "slug": "organizational-throughput",
       "status": "published",
       "thumbnail": "/assets/images/case-studies/organizational-throughput.jpg",
       "outcome": "Deployment frequency doubled; unplanned work reduced 50%; morale and engagement metrics improved."
@@ -81,7 +81,7 @@
       ],
       "summary": "A combined financial and technical due-diligence engagement where Echelon Foundry evaluated a high-velocity fintech platform, uncovering material architectural and operational risks and guiding capital allocation toward a stronger medical-sector opportunity.",
       "weight": 4,
-      "url": "/case-studies/fintech-investment.html",
+      "slug": "fintech-investment",
       "status": "published",
       "thumbnail": "/assets/images/case-studies/fintech-investment.jpg",
       "outcome": "Investment preserved and reallocated; risk-adjusted returns improved by avoiding a high-risk fintech position and directing capital to a higher-performing medical opportunity."

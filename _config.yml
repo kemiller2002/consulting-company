@@ -1,8 +1,0 @@
-title: Echelon Foundry
-description: Strategy. Architecture. Insight. Forged.
-baseurl: ""
-url: ""
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
